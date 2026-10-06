@@ -1,20 +1,27 @@
 FROM debian:bookworm-slim
 
 ENV DEBIAN_FRONTEND=noninteractive
+# Railway menggunakan variabel PORT otomatis, kita default ke 8080
+ENV PORT=8080
 
-# Install paket dasar tanpa ttyd
-RUN apt-get update && apt-get upgrade -y && \
-    apt-get install -y \
-    curl wget python3 python3-pip python3-venv nodejs npm \
-    vim nano htop net-tools git
+# 1. Install Python dan Curl
+RUN apt-get update && apt-get install -y \
+    python3 python3-pip curl \
+    && rm -rf /var/lib/apt/lists/*
 
-# Unduh dan pasang ttyd secara manual dari rilis resminya
+# 2. Unduh ttyd secara manual (Solusi untuk error E: Package 'ttyd' has no installation candidate)
 RUN curl -sLo /usr/local/bin/ttyd https://github.com/tsl0922/ttyd/releases/download/1.7.3/ttyd.x86_64 && \
     chmod +x /usr/local/bin/ttyd
 
-RUN npm install -g pm2
+WORKDIR /app
 
-ENV PORT=8080
+# 3. Pindahkan semua file source code dari GitHub ke dalam container
+COPY . /app
+
+# 4. Install requirements Python
+RUN pip3 install --no-cache-dir --break-system-packages -r requirements.txt
+
 EXPOSE 8080
 
-CMD ["sh", "-c", "ttyd -p $PORT -c root:riski223 bash"]
+# 5. Jalankan Web Terminal dengan otentikasi (username: admin, password: password_bebas)
+CMD ["sh", "-c", "ttyd -p $PORT -c admin:admin123 bash"]
