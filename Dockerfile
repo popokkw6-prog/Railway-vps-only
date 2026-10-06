@@ -3,20 +3,21 @@ FROM ubuntu:22.04
 ENV DEBIAN_FRONTEND=noninteractive
 
 # Update dan install paket dasar beserta OpenSSH
+# (unzip dihapus karena kita akan menggunakan tar bawaan Ubuntu)
 RUN apt-get update && apt-get upgrade -y && \
     apt-get install -y \
     curl wget python3 python3-pip nodejs npm \
-    vim nano htop net-tools openssh-server unzip
+    vim nano htop net-tools openssh-server
 
-# Konfigurasi OpenSSH (Ubah 'rahasia123' dengan password Anda)
+# Konfigurasi OpenSSH 
 RUN mkdir -p /var/run/sshd && \
     echo 'root:riski223' | chpasswd && \
     sed -i 's/#PermitRootLogin prohibit-password/PermitRootLogin yes/' /etc/ssh/sshd_config
 
-# Install Ngrok untuk TCP Tunneling
-RUN curl -s https://ngrok-agent.s3.amazonaws.com/ngrok.zip -o ngrok.zip && \
-    unzip ngrok.zip -d /usr/local/bin && \
-    rm ngrok.zip
+# Install Ngrok versi terbaru (v3) untuk Linux (menggunakan .tgz)
+RUN curl -sSL https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-linux-amd64.tgz -o ngrok.tgz && \
+    tar -xvzf ngrok.tgz -C /usr/local/bin && \
+    rm ngrok.tgz
 
 # Install PM2 untuk menjalankan multiple services di background
 RUN npm install -g pm2
