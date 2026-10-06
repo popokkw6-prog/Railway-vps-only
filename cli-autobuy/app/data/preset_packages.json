@@ -1,0 +1,90 @@
+[
+    {
+        "label": "WhatsApp 10GB",
+        "family_code": "7658c955-a0b9-405f-bb17-de7f43d1a946",
+        "family_name": "Kuota Aplikasi Xtra Combo Plus 10GB",
+        "variant_code": "788965e2-e28f-4e47-94a1-26534887741b",
+        "variant_name": "Bonus Xtra Combo Plus 10GB",
+        "option_name": "WhatsApp 10GB",
+        "order": 4,
+        "is_enterprise": false,
+        "benefit_names": ["Whatsapp"]
+    },
+    {
+        "label": "Instagram 10GB",
+        "family_code": "7658c955-a0b9-405f-bb17-de7f43d1a946",
+        "family_name": "Kuota Aplikasi Xtra Combo Plus 10GB",
+        "variant_code": "788965e2-e28f-4e47-94a1-26534887741b",
+        "variant_name": "Bonus Xtra Combo Plus 10GB",
+        "option_name": "Instagram 10GB",
+        "order": 6,
+        "is_enterprise": false,
+        "benefit_names": ["Instagram"]
+    },
+    {
+        "label": "Facebook 10GB",
+        "family_code": "7658c955-a0b9-405f-bb17-de7f43d1a946",
+        "family_name": "Kuota Aplikasi Xtra Combo Plus 10GB",
+        "variant_code": "788965e2-e28f-4e47-94a1-26534887741b",
+        "variant_name": "Bonus Xtra Combo Plus 10GB",
+        "option_name": "Facebook 10GB",
+        "order": 7,
+        "is_enterprise": false,
+        "benefit_names": ["Facebook"]
+    },
+    {
+        "label": "YouTube 10GB",
+        "family_code": "7658c955-a0b9-405f-bb17-de7f43d1a946",
+        "family_name": "Kuota Aplikasi Xtra Combo Plus 10GB",
+        "variant_code": "788965e2-e28f-4e47-94a1-26534887741b",
+        "variant_name": "Bonus Xtra Combo Plus 10GB",
+        "option_name": "YouTube 10GB",
+        "order": 8,
+        "is_enterprise": false,
+        "benefit_names": ["Youtube"]
+    },
+    {
+        "label": "TikTok 10GB",
+        "family_code": "7658c955-a0b9-405f-bb17-de7f43d1a946",
+        "family_name": "Kuota Aplikasi Xtra Combo Plus 10GB",
+        "variant_code": "788965e2-e28f-4e47-94a1-26534887741b",
+        "variant_name": "Bonus Xtra Combo Plus 10GB",
+        "option_name": "TikTok 10GB",
+        "order": 9,
+        "is_enterprise": false,
+        "benefit_names": ["Tiktok"]
+    },
+    {
+        "label": "Games 10GB",
+        "family_code": "7658c955-a0b9-405f-bb17-de7f43d1a946",
+        "family_name": "Kuota Aplikasi Xtra Combo Plus 10GB",
+        "variant_code": "788965e2-e28f-4e47-94a1-26534887741b",
+        "variant_name": "Bonus Xtra Combo Plus 10GB",
+        "option_name": "Games 10GB",
+        "order": 1,
+        "is_enterprise": false,
+        "benefit_names": ["Games"]
+    },
+    {
+        "label": "Social Media 10GB",
+        "family_code": "7658c955-a0b9-405f-bb17-de7f43d1a946",
+        "family_name": "Kuota Aplikasi Xtra Combo Plus 10GB",
+        "variant_code": "788965e2-e28f-4e47-94a1-26534887741b",
+        "variant_name": "Bonus Xtra Combo Plus 10GB",
+        "option_name": "Social Media 10GB",
+        "order": 2,
+        "is_enterprise": false,
+        "benefit_names": ["Sosmed"]
+    },
+    {
+        "label": "Streaming 10GB",
+        "family_code": "7658c955-a0b9-405f-bb17-de7f43d1a946",
+        "family_name": "Kuota Aplikasi Xtra Combo Plus 10GB",
+        "variant_code": "788965e2-e28f-4e47-94a1-26534887741b",
+        "variant_name": "Bonus Xtra Combo Plus 10GB",
+        "option_name": "Streaming 10GB",
+        "order": 3,
+        "is_enterprise": false,
+        "benefit_names": ["Streaming"]
+    }
+]
