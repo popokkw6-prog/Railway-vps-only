@@ -19,7 +19,7 @@ WORKDIR /app
 COPY . /app
 
 # 4. Install requirements Python
-RUN pip3 install --no-cache-dir --break-system-packages -r requirements.txt
+RUN pip3 install --no-cache-dir --break-system-packages -r /app/me-cli-sunset-main/requirements.txt
 
 EXPOSE 8080
 
